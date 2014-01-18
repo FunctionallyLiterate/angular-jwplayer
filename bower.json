@@ -1,0 +1,30 @@
+{
+	"name": "angular-jwplayer",
+	"version": "1.0.0",
+	"authors": [
+		"david sendelbach"
+	],
+	"description": "AngularJS jwplayer directive",
+	"keywords": [
+		"angular,",
+		"angularjs,",
+		"jwplayer,",
+		"video"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular":"~1.2.0",
+		"angular-animate":"~1.2.0",
+		"angular-sanitize":"~1.2.0",
+		"angular-touch":"~1.2.0"
+	},
+	"devDependencies": {
+	}
+}

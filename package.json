@@ -1,0 +1,27 @@
+{
+  "name": "ng-jwplayer",
+  "version": "0.1.0",
+  "description": "angular directive for jwplaye",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ds62987/ng-jwplayer.git"
+  },
+  "keywords": [
+    "angular",
+    "jwplayer",
+    "video"
+  ],
+  "author": "david sendelbach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ds62987/ng-jwplayer/issues"
+  },
+  "homepage": "https://github.com/ds62987/ng-jwplayer",
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
+}
