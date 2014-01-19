@@ -8,7 +8,12 @@
     "angular-jwplayer.js"
   ],
   "description": "angularjs directive for jwplayer video player.",
-  "keywords": ["angularjs", "video", "jwplayer", "angular-jwplayer"],
+  "keywords": [
+    "angularjs",
+    "video",
+    "jwplayer",
+    "angular-jwplayer"
+  ],
   "license": "MIT",
   "ignore": [
     "node_modules",
@@ -35,7 +40,5 @@
     "angular-route": "~1.2.0",
     "jwplayer-mirror": "~6.7.4071"
   },
-  "devDependencies": {
-    
-  }
+  "devDependencies": {}
 }

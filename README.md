@@ -22,10 +22,15 @@ See `bower.json` and `index.html` in the `gh-pages` branch for a full list / mor
 
 
 ## Documentation
-See the `jwplayer.js` file top comments for usage examples and documentation
-https://github.com/ds62987/angular-jwplayer/blob/master/jwplayer.js
+####Note: You must include angular and jwplayer on the page as well.
+If you have a key for jwplayer just include it as you normally would according to their docs
+```html
+<script type="text/javascript" src="/scripts/jwplayer.js" ></script>
+<script type="text/javascript">jwplayer.key="YOUR_JW_PLAYER_KEY";</script>
 
+```
 
+Add any jwplayer setup options you want to an object in your angular controller.
 ```js
 angular.module('myApp').controller('HomeCtrl', ['$scope', function($scope) {
 
@@ -36,5 +41,14 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function($scope) {
 	};
 
 }]);
+
+```
+
+Add the element to the page and set the "setup" attribute to the variable you set up in your controller.  It is also a good idea to
+give the element an id.
+```html
+<div ng-controller='HomeCtrl'>	
+	<jwplayer id="myplayer" setup="options"></jwplayer>
+</div>
 
 ```
