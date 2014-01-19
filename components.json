@@ -1,9 +1,0 @@
-{
-    "name": "angular-jwplayer",
-    "version": "1.0.0",
-    "main": "./dist/angular-jwplayer.min.js",
-    "dependencies": {
-        "jwplayer-mirror": "~6.7.4071",
-        "angular": "~1.2.0"
-    }
-}
