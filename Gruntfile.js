@@ -21,6 +21,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-karma');
 
 	/**
@@ -38,6 +40,17 @@ module.exports = function(grunt) {
 				devCss: {
 					src:    [],
 					dest:   []
+				}
+			},
+			connect:{
+				server:{
+					uses_defaults: {}
+				}
+			},
+			watch:{
+				script:{
+					files: ['*.js'],
+   					tasks: ['jshint', 'uglify']
 				}
 			},
 			jshint: {
@@ -84,8 +97,8 @@ module.exports = function(grunt) {
 				},
 				build: {
 					files:  {},
-					src:    'jwplayer.js',
-					dest:   'jwplayer.min.js'
+					src:    'angular-jwplayer.js',
+					dest:   'dist/angular-jwplayer.min.js'
 				}
 			},
 			less: {
@@ -94,14 +107,14 @@ module.exports = function(grunt) {
 					},
 					files: {
 						"main.css": "_base.less",
-						"jwplayer.css": "_jwplayer.less"
+						"angular-jwplayer.css": "_angular-jwplayer.less"
 					}
 				}
 			},
 			cssmin: {
 				dev: {
-					src: ['jwplayer.css'],
-					dest: 'jwplayer.min.css'
+					src: ['angular-jwplayer.css'],
+					dest: 'angular-jwplayer.min.css'
 				}
 			}/*,
 			karma: {
@@ -121,7 +134,7 @@ module.exports = function(grunt) {
 		// Default task(s).
 		// grunt.registerTask('default', ['jshint:beforeconcat', 'less:development', 'concat:devJs', 'concat:devCss']);
 		grunt.registerTask('default', ['jshint:beforeconcatQ', 'less:development', 'cssmin', 'uglify:build']);
-	
+		grunt.registerTask('serve', ['connect', 'watch']);
 	}
 	init({});		//initialize here for defaults (init may be called again later within a task)
 

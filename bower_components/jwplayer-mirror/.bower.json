@@ -1,0 +1,14 @@
+{
+  "name": "jwplayer-mirror",
+  "homepage": "https://github.com/mimedia/jwplayer-mirror",
+  "version": "6.7.4071",
+  "_release": "6.7.4071",
+  "_resolution": {
+    "type": "version",
+    "tag": "v6.7.4071",
+    "commit": "2d10708b3a9b595cc202be52959869848d6b6926"
+  },
+  "_source": "git://github.com/mimedia/jwplayer-mirror.git",
+  "_target": "~6.7.4071",
+  "_direct": true
+}
