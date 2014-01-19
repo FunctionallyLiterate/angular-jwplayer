@@ -1,6 +1,6 @@
 {
   "name": "angular-jwplayer",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "authors": [
     "david sendelbach"
   ],
@@ -18,7 +18,14 @@
     "pages",
     "server.js",
     "index.html",
-    "*"
+    "server.js",
+    "README.md",
+    "package.json",
+    "LICENSE.*",
+    "Gruntfile.*",
+    "CHANGELOG.md",
+    "app.js",
+    ".gitignore"
   ],
   "dependencies": {
     "angular": "~1.2.0",
