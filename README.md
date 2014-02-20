@@ -32,7 +32,7 @@ If you have a key for jwplayer just include it as you normally would according t
 
 Add any jwplayer setup options you want to an object in your angular controller.
 ```js
-angular.module('myApp').controller('HomeCtrl', ['$scope', function($scope) {
+angular.module('myApp',['angular-jwplayer']).controller('HomeCtrl', ['$scope', function($scope) {
 
 	$scope.options = {
 		file: "pathToMyVideo/myvideo.mp4",
