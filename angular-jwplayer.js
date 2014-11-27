@@ -14,14 +14,14 @@ angular.module('angular-jwplayer', []).directive('jwplayer', [ function () {
 		},
 
 		template: function(scope, element, attrs) {
-			if(scope.id === null || typeof(scope.id) === undefined)
+			if(scope.id === null || typeof(scope.id) === 'undefined')
 				scope.id = defaultProps.id;
 
 			return "<div id='" + scope.id + "'></div>";
 		},
 		
 		link: function(scope, element, attrs) {
-			if(scope.id === null || typeof(scope.id) === undefined)
+			if(scope.id === null || typeof(scope.id) === 'undefined')
 				scope.id = defaultProps.id;
 
 			jwplayer(scope.id).setup(scope.setupVars);
