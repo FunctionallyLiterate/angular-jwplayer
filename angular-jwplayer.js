@@ -1,30 +1,21 @@
 'use strict';
-angular.module('angular-jwplayer', []).directive('jwplayer', [ function () {
+angular.module('angular-jwplayer', []).directive('jwplayer', ['$compile', function ($compile) {
+    return {
+        restrict: 'EC',
+        scope: {
+            playerId: '@',
+            setupVars: '=setup'
 
-	var defaultProps = {
-		id : 'angular-jwplayer-' + Math.floor((Math.random()*999999999)+1)
-	};
+        },
+        link: function (scope, element, attrs) {
+            var id = scope.playerId || 'random_player_' + Math.floor((Math.random() * 999999999) + 1),
+                getTemplate = function (playerId) {
+                return '<div id="' + playerId + '"></div>';
+            };
 
-	return {
-		restrict: 'EC',
-		scope: {
-			id: '@id',
-			setupVars: '=setup'
-
-		},
-
-		template: function(scope, element, attrs) {
-			if(scope.id === null || typeof(scope.id) === undefined)
-				scope.id = defaultProps.id;
-
-			return "<div id='" + scope.id + "'></div>";
-		},
-		
-		link: function(scope, element, attrs) {
-			if(scope.id === null || typeof(scope.id) === undefined)
-				scope.id = defaultProps.id;
-
-			jwplayer(scope.id).setup(scope.setupVars);
-		}
-	};
+            element.html(getTemplate(id));
+            $compile(element.contents())(scope);
+            jwplayer(id).setup(scope.setupVars);
+        }
+    };
 }]);

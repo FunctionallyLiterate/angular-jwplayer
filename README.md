@@ -36,6 +36,7 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function($scope) {
 
 	$scope.options = {
 		file: "pathToMyVideo/myvideo.mp4",
+		image: "pathToMyImage/image.jpg", // optionnal
         height: 360,
         width: 640
 	};
@@ -45,10 +46,10 @@ angular.module('myApp').controller('HomeCtrl', ['$scope', function($scope) {
 ```
 
 Add the element to the page and set the "setup" attribute to the variable you set up in your controller.  It is also a good idea to
-give the element an id.
+give the element an id byt setting player-id variable.
 ```html
 <div ng-controller='HomeCtrl'>	
-	<jwplayer id="myplayer" setup="options"></jwplayer>
+	<jwplayer player-id="myplayer" setup="options"></jwplayer>
 </div>
 
 ```
